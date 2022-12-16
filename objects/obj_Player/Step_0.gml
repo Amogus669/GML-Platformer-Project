@@ -31,3 +31,43 @@ if(place_meeting(x,y+vsp,obj_wall))
 	vsp = 0;
 }
 y = y + vsp;
+
+//Jumping Mechanics
+if( place_meeting(x, y+1, obj_wall) && (key_jump)) {
+	vsp = -jumpsp;
+}
+
+//Animation States
+if(!place_meeting(x, y+1, obj_wall))
+{
+	sprite_index = sp_jump;
+	image_speed = 0;
+	
+	//Are we jumping?
+	if(vsp < -4.5) {
+	image_index = 1;
+	}
+	
+	// Are we at the top?
+	else if (vsp >= -4.5 && vsp <= 4.5) {
+		image_index = 2;
+	}
+		
+	// Are we falling?
+	else if (vsp > 4.5) {
+		image_index = 3;
+	}
+
+}
+else {
+	image_speed = 1;
+
+	//Are we idle nor moving left/right
+	if(hsp == 0) {
+		sprite_index = sp_idle;
+	}
+	else {
+		sprite_index = sp_playerrun;
+	}
+}
+if(hsp != 0) image_xscale = sign(hsp);
