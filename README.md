@@ -12,8 +12,8 @@ A GML Starter kit for the **Platformer Tutorial (GML) - Parts 1 & 2**
 * All I have provided are the assets from the tutorial and the preferences for GML code (not visual).
 * My goal is to provide a template that a student can clone to follow along with Shaun and practice using Source Control Management along the way.
 
-I completed both videos 1 and 2 
-I have completed sprites and their animations, collision masks, tilesets and auto tiling, backgrounds and background animation, and movement.
+* I completed both videos 1 and 2 
+* I have completed sprites and their animations, collision masks, tilesets and auto tiling, backgrounds and background animation, and movement.
 
 ## Credits
 The assets and video tutorials were created by [Shaun Spalding](https://www.youtube.com/c/ShaunSpalding).
